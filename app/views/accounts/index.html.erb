@@ -6,18 +6,13 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Desc</th>
       <th>Industry</th>
       <th>Relationship type</th>
-      <th>Company size</th>
       <th>Company email</th>
       <th>Company phone</th>
-      <th>Company fax</th>
       <th>Company address1</th>
-      <th>Company address2</th>
-      <th>Company state</th>
-      <th>Company country</th>
-      <th>Status</th>
+      <th>Company Website</th>
+      <th>Owner</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,18 +21,13 @@
     <% @accounts.each do |account| %>
       <tr>
         <td><%= account.name %></td>
-        <td><%= account.desc %></td>
         <td><%= account.industry %></td>
         <td><%= account.relationship_type %></td>
-        <td><%= account.company_size %></td>
         <td><%= account.company_email %></td>
         <td><%= account.company_phone %></td>
-        <td><%= account.company_fax %></td>
         <td><%= account.company_address1 %></td>
-        <td><%= account.company_address2 %></td>
-        <td><%= account.company_state %></td>
-        <td><%= account.company_country %></td>
-        <td><%= account.status %></td>
+        <td><%= account.website %></td>
+        <td><%= account.user.full_name %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,9 +10,8 @@
       <th>Stage</th>
       <th>Solution</th>
       <th>Contact</th>
-      <th>Owner</th>
-      <th>Status</th>
       <th>Close date</th>
+      <th>Owner</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,9 +24,8 @@
         <td><%= support_case.stage %></td>
         <td><%= support_case.solution %></td>
         <td><%= support_case.contact.full_name %></td>
-        <td><%= support_case.user.full_name %></td>
-        <td><%= support_case.status %></td>
         <td><%= support_case.close_date %></td>
+        <td><%= support_case.user.full_name %></td>
         <td><%= link_to 'Show', support_case %></td>
         <td><%= link_to 'Edit', edit_support_case_path(support_case) %></td>
         <td><%= link_to 'Destroy', support_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>

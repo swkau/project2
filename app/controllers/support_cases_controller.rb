@@ -16,6 +16,7 @@ class SupportCasesController < ApplicationController
   # GET /support_cases/new
   def new
     @support_case = current_user.support_cases.build
+    @contact_account = Contact.joins(:account)
   end
 
   # GET /support_cases/1/edit

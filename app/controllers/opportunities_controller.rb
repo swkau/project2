@@ -16,6 +16,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/new
   def new
     @opportunity = current_user.opportunities.build
+    @contact_account = Contact.joins(:account)
   end
 
   # GET /opportunities/1/edit

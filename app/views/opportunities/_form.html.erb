@@ -31,11 +31,7 @@
     <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}) %>
   </div>
   <div class="field">
-    <%= f.select :contact_id, options_for_select(Contact.all.map{|s|[s.full_name, s.id]}) %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
+    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

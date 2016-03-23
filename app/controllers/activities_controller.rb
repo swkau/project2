@@ -16,6 +16,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = current_user.activities.build
+    @contact_account = Contact.joins(:account)
   end
 
   # GET /activities/1/edit
@@ -70,6 +71,6 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.require(:activity).permit(:name, :type, :desc, :start, :end, :status)
+      params.require(:activity).permit(:name, :type, :desc, :start, :end, :status, :account_id, :contact_id, :opportunity_id, :support_case_id)
     end
 end
