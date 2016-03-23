@@ -1,0 +1,101 @@
+<%= form_for(@role_access) do |f| %>
+  <% if @role_access.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@role_access.errors.count, "error") %> prohibited this role_access from being saved:</h2>
+
+      <ul>
+      <% @role_access.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_c %><br>
+    <%= f.number_field :lead_c %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_r %><br>
+    <%= f.number_field :lead_r %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_u %><br>
+    <%= f.number_field :lead_u %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_d %><br>
+    <%= f.number_field :lead_d %>
+  </div>
+  <div class="field">
+    <%= f.label :account_c %><br>
+    <%= f.number_field :account_c %>
+  </div>
+  <div class="field">
+    <%= f.label :account_r %><br>
+    <%= f.number_field :account_r %>
+  </div>
+  <div class="field">
+    <%= f.label :account_u %><br>
+    <%= f.number_field :account_u %>
+  </div>
+  <div class="field">
+    <%= f.label :account_d %><br>
+    <%= f.number_field :account_d %>
+  </div>
+  <div class="field">
+    <%= f.label :opportunity_c %><br>
+    <%= f.number_field :opportunity_c %>
+  </div>
+  <div class="field">
+    <%= f.label :opportunity_r %><br>
+    <%= f.number_field :opportunity_r %>
+  </div>
+  <div class="field">
+    <%= f.label :opportunity_u %><br>
+    <%= f.number_field :opportunity_u %>
+  </div>
+  <div class="field">
+    <%= f.label :opportunity_d %><br>
+    <%= f.number_field :opportunity_d %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_c %><br>
+    <%= f.number_field :contact_c %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_r %><br>
+    <%= f.number_field :contact_r %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_u %><br>
+    <%= f.number_field :contact_u %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_d %><br>
+    <%= f.number_field :contact_d %>
+  </div>
+  <div class="field">
+    <%= f.label :case_c %><br>
+    <%= f.number_field :case_c %>
+  </div>
+  <div class="field">
+    <%= f.label :case_r %><br>
+    <%= f.number_field :case_r %>
+  </div>
+  <div class="field">
+    <%= f.label :case_u %><br>
+    <%= f.number_field :case_u %>
+  </div>
+  <div class="field">
+    <%= f.label :case_d %><br>
+    <%= f.number_field :case_d %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

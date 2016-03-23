@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desc: MyText
+  stage: MyString
+  solution: MyText
+  status: false
+  close_date: 2016-03-22 19:51:36
+
+two:
+  name: MyString
+  desc: MyText
+  stage: MyString
+  solution: MyText
+  status: false
+  close_date: 2016-03-22 19:51:36

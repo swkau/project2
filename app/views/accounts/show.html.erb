@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @account.desc %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @account.industry %>
+</p>
+
+<p>
+  <strong>Relationship type:</strong>
+  <%= @account.relationship_type %>
+</p>
+
+<p>
+  <strong>Company size:</strong>
+  <%= @account.company_size %>
+</p>
+
+<p>
+  <strong>Company email:</strong>
+  <%= @account.company_email %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @account.company_phone %>
+</p>
+
+<p>
+  <strong>Company fax:</strong>
+  <%= @account.company_fax %>
+</p>
+
+<p>
+  <strong>Company address1:</strong>
+  <%= @account.company_address1 %>
+</p>
+
+<p>
+  <strong>Company address2:</strong>
+  <%= @account.company_address2 %>
+</p>
+
+<p>
+  <strong>Company state:</strong>
+  <%= @account.company_state %>
+</p>
+
+<p>
+  <strong>Company country:</strong>
+  <%= @account.company_country %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @account.status %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

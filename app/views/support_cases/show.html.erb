@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @support_case.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @support_case.desc %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @support_case.stage %>
+</p>
+
+<p>
+  <strong>Solution:</strong>
+  <%= @support_case.solution %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @support_case.status %>
+</p>
+
+<p>
+  <strong>Close date:</strong>
+  <%= @support_case.close_date %>
+</p>
+
+<%= link_to 'Edit', edit_support_case_path(@support_case) %> |
+<%= link_to 'Back', support_cases_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  desc: MyText
+  start: 2016-03-22 19:51:50
+  end: 2016-03-22 19:51:50
+  status: false
+
+two:
+  name: MyString
+  type: 
+  desc: MyText
+  start: 2016-03-22 19:51:50
+  end: 2016-03-22 19:51:50
+  status: false
