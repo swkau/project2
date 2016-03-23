@@ -12,6 +12,13 @@
   <% else %>
   <%= link_to "Log in", new_user_session_path, method: :get %>
   <% end %>
+  <%= link_to "Home", root_path %>
+  <%= link_to "Leads", leads_path %>
+  <%= link_to "Accounts", accounts_path %>
+  <%= link_to "Contacts", contacts_path %>
+  <%= link_to "Opportunities", opportunities_path %>
+  <%= link_to "Support", support_cases_path %>
+  <%= link_to "Activities", activities_path %>
 <% if notice %>
   <p class="notice"><%= notice %></p>
 <% elsif alert %>

@@ -70,6 +70,6 @@ class SupportCasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def support_case_params
-      params.require(:support_case).permit(:name, :desc, :stage, :solution, :status, :close_date)
+      params.require(:support_case).permit(:name, :desc, :stage, :solution, :status, :contact_id, :close_date)
     end
 end

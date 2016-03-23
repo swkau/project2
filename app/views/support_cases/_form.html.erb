@@ -20,6 +20,9 @@
     <%= f.text_area :desc %>
   </div>
   <div class="field">
+    <%= f.select :contact_id, options_for_select(Contact.all.map{|s|[s.full_name, s.id]}) %>
+  </div>
+  <div class="field">
     <%= f.label :stage %><br>
     <%= f.text_field :stage %>
   </div>
