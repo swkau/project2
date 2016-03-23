@@ -32,8 +32,19 @@
     <%= f.datetime_select :end %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
+    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Account' %>
+  </div>
+  <div class="field">
+    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), :include_blank => 'Select Contact' %>
+  </div>
+  <div class="field">
+    <%= f.select :lead_id, options_for_select(Lead.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Lead' %>
+  </div>
+  <div class="field">
+    <%= f.select :opportunity_id, options_for_select(Opportunity.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Opportunity' %>
+  </div>
+  <div class="field">
+    <%= f.select :support_case_id, options_for_select(SupportCase.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Support Case' %>
   </div>
   <div class="actions">
     <%= f.submit %>

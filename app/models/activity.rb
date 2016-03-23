@@ -4,4 +4,5 @@ class Activity < ActiveRecord::Base
   belongs_to :opportunity
   belongs_to :support_case
   belongs_to :user
+  belongs_to :lead
 end

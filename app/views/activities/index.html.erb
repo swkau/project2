@@ -8,9 +8,15 @@
       <th>Name</th>
       <th>Type</th>
       <th>Desc</th>
+      <th>Lead</th>
+      <th>Account</th>
+      <th>Contact</th>
+      <th>Opportunity</th>
+      <th>Support Case</th>
+      <th>Owner</th>
       <th>Start</th>
       <th>End</th>
-      <th>Status</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,9 +27,14 @@
         <td><%= activity.name %></td>
         <td><%= activity.type %></td>
         <td><%= activity.desc %></td>
+        <td><%= activity.lead.name %></td>
+        <td><%= activity.account.name %></td>
+        <td><%= activity.contact.full_name %></td>
+        <td><%= activity.opportunity.name %></td>
+        <td><%= activity.support_case.name %></td>
+        <td><%= activity.user.full_name %></td>
         <td><%= activity.start %></td>
         <td><%= activity.end %></td>
-        <td><%= activity.status %></td>
         <td><%= link_to 'Show', activity %></td>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
         <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>

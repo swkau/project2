@@ -21,6 +21,7 @@ class OpportunitiesController < ApplicationController
 
   # GET /opportunities/1/edit
   def edit
+    @contact_account = Contact.joins(:account)
   end
 
   # POST /opportunities

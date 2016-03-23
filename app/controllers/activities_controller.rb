@@ -21,6 +21,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
+    @contact_account = Contact.joins(:account)
   end
 
   # POST /activities

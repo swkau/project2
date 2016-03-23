@@ -21,6 +21,7 @@ class SupportCasesController < ApplicationController
 
   # GET /support_cases/1/edit
   def edit
+    @contact_account = Contact.joins(:account)
   end
 
   # POST /support_cases
