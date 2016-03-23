@@ -13,40 +13,40 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.label :activity_type %><br>
+    <%= f.text_field :activity_type, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :desc %><br>
-    <%= f.text_area :desc %>
+    <%= f.text_area :desc, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :start %><br>
-    <%= f.datetime_select :start %>
+    <%= f.datetime_select :start, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :end %><br>
-    <%= f.datetime_select :end %>
+    <%= f.datetime_select :end, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Account' %>
+    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Account', :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), :include_blank => 'Select Contact' %>
+    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), :include_blank => 'Select Contact', :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :lead_id, options_for_select(Lead.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Lead' %>
+    <%= f.select :lead_id, options_for_select(Lead.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Lead', :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :opportunity_id, options_for_select(Opportunity.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Opportunity' %>
+    <%= f.select :opportunity_id, options_for_select(Opportunity.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Opportunity', :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :support_case_id, options_for_select(SupportCase.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Support Case' %>
+    <%= f.select :support_case_id, options_for_select(SupportCase.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Support Case', :class => 'form-control input-transparent' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-primary'%>
   </div>
 <% end %>

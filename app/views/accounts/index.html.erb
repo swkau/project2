@@ -1,41 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div class="content container">
+<h2 class="page-title">Accounts - <span class="fw-semi-bold">List</span></h2>
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h4>
+                    Table <span class="fw-semi-bold">Style</span>
+                </h4>
+            </header>
+            <div class="body">
+              <p id="notice"><%= notice %></p>
+              <div class="table-responsive">
+                  <table class="table table-hover table-striped">
+                      <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Industry</th>
+                            <th>Relationship type</th>
+                            <th>Company email</th>
+                            <th>Company phone</th>
+                            <th>Company address1</th>
+                            <th>Company Website</th>
+                            <th>Owner</th>
+                            <th colspan="3"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <% @accounts.each do |account| %>
+                          <tr>
+                            <td><%= account.name %></td>
+                            <td><%= account.industry %></td>
+                            <td><%= account.relationship_type %></td>
+                            <td><%= account.company_email %></td>
+                            <td><%= account.company_phone %></td>
+                            <td><%= account.company_address1 %></td>
+                            <td><%= account.website %></td>
+                            <td><%= account.user.full_name %></td>
+                            <td><%= link_to 'Show', account %></td>
+                            <td><%= link_to 'Edit', edit_account_path(account) %></td>
+                            <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                  </table>
+              </div>
 
-<h1>Listing Accounts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Industry</th>
-      <th>Relationship type</th>
-      <th>Company email</th>
-      <th>Company phone</th>
-      <th>Company address1</th>
-      <th>Company Website</th>
-      <th>Owner</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @accounts.each do |account| %>
-      <tr>
-        <td><%= account.name %></td>
-        <td><%= account.industry %></td>
-        <td><%= account.relationship_type %></td>
-        <td><%= account.company_email %></td>
-        <td><%= account.company_phone %></td>
-        <td><%= account.company_address1 %></td>
-        <td><%= account.website %></td>
-        <td><%= account.user.full_name %></td>
-        <td><%= link_to 'Show', account %></td>
-        <td><%= link_to 'Edit', edit_account_path(account) %></td>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Account', new_account_path %>
+            </div>
+        </section>
+    </div>
+</div>
