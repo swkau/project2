@@ -31,7 +31,7 @@
                           <tr>
                             <td><%= contact.first_name %></td>
                             <td><%= contact.last_name %></td>
-                            <td><%= contact.account.name %></td>
+                            <td><a href="/accounts/<%= contact.account.id if contact.account %>"><%= contact.account.name %></a></td>
                             <td><%= contact.job_position %></td>
                             <td><%= contact.role %></td>
                             <td><%= contact.email %></td>

@@ -27,9 +27,8 @@
                       </thead>
                       <tbody>
                         <% @leads.each do |lead| %>
-                          <tr>
-                            <a href="/leads/<%= lead.id %>">
-                            <td><a href="/leads/<%= lead.id %>"><%= lead.name %></a></td>
+                          <tr onclick="location.href='/leads/<%= lead.id %>';">
+                            <td><%= lead.name %></td>
                             <td><%= lead.desc %></td>
                             <td><%= lead.source %></td>
                             <td><%= lead.contact_name %></td>
@@ -37,10 +36,8 @@
                             <td><%= lead.contact_email %></td>
                             <td><%= lead.phone %></td>
                             <td><%= lead.user.full_name %></td>
-                            <td><%= link_to 'Show', lead %></td>
                             <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
                             <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                            </a>
                           </tr>
                         <% end %>
                       </tbody>

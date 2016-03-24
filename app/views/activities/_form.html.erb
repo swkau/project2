@@ -25,26 +25,31 @@
   </div>
   <div class="field">
     <%= f.label :start %><br>
-    <%= f.datetime_select :start, :class => 'form-control input-transparent' %>
+    <%= f.datetime_select :start, :id => 'datetimepicker1' %>
   </div>
   <div class="field">
     <%= f.label :end %><br>
     <%= f.datetime_select :end, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Account', :class => 'form-control input-transparent' %>
+    <%= f.label :account_id, :class => 'control-label' %>
+    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), {}, :include_blank => 'Select Account', :class => 'btn-default' %>
   </div>
   <div class="field">
-    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), :include_blank => 'Select Contact', :class => 'form-control input-transparent' %>
+    <%= f.label :contact_id, :class => 'control-label' %>
+    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), {}, :include_blank => 'Select Contact', :class => 'btn-default' %>
   </div>
   <div class="field">
-    <%= f.select :lead_id, options_for_select(Lead.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Lead', :class => 'form-control input-transparent' %>
+    <%= f.label :lead_id %>
+    <%= f.select :lead_id, options_for_select(Lead.all.map{|s|[s.name, s.id]}), {}, :include_blank => 'Select Lead', :class => 'btn-default' %>
   </div>
   <div class="field">
-    <%= f.select :opportunity_id, options_for_select(Opportunity.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Opportunity', :class => 'form-control input-transparent' %>
+    <%= f.label :opportunity_id %>
+    <%= f.select :opportunity_id, options_for_select(Opportunity.all.map{|s|[s.name, s.id]}), {}, :include_blank => 'Select Opportunity', :class => 'btn-default' %>
   </div>
   <div class="field">
-    <%= f.select :support_case_id, options_for_select(SupportCase.all.map{|s|[s.name, s.id]}), :include_blank => 'Select Support Case', :class => 'form-control input-transparent' %>
+    <%= f.label :case_id %>
+    <%= f.select :support_case_id, options_for_select(SupportCase.all.map{|s|[s.name, s.id]}), {}, :include_blank => 'Select Support Case', :class => 'btn-default' %>
   </div>
   <div class="actions">
     <%= f.submit :class => 'btn btn-primary'%>

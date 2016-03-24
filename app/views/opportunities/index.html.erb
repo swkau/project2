@@ -31,8 +31,8 @@
                             <td><%= opportunity.desc %></td>
                             <td><%= opportunity.stage %></td>
                             <td><%= opportunity.value %></td>
-                            <td><%= opportunity.account.name %></td>
-                            <td><%= opportunity.contact.full_name %></td>
+                            <td><a href="/accounts/<%= opportunity.account.id if opportunity.account %>"><%= opportunity.account.name %></a></td>
+                            <td><a href="/contacts/<%= opportunity.contact.id if opportunity.contact %>"><%= opportunity.contact.full_name %></a></td>
                             <td><%= opportunity.user.full_name %></td>
                             <td><%= link_to 'Show', opportunity %></td>
                             <td><%= link_to 'Edit', edit_opportunity_path(opportunity) %></td>

@@ -27,7 +27,7 @@
                       </thead>
                       <tbody>
                         <% @accounts.each do |account| %>
-                          <tr>
+                          <tr onclick="location.href='/accounts/<%= account.id %>';">
                             <td><%= account.name %></td>
                             <td><%= account.industry %></td>
                             <td><%= account.relationship_type %></td>

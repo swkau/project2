@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :desc %><br>
-    <%= f.text_area :desc %>
+    <%= f.text_area :desc, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :stage %><br>
-    <%= f.text_field :stage %>
+    <%= f.text_field :stage, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
     <%= f.label :value %><br>
-    <%= f.text_field :value %>
+    <%= f.text_field :value, :class => 'form-control input-transparent' %>
   </div>
   <div class="field">
-    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}) %>
+    <%= f.select :account_id, options_for_select(Account.all.map{|s|[s.name, s.id]}), {}, :class => 'btn-default' %>
   </div>
   <div class="field">
-    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}) %>
+    <%= f.select :contact_id, options_for_select(@contact_account.all.map{|s|[s.full_name+" from "+s.account.name, s.id]}), {}, :class => 'btn-default' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-primary' %>
   </div>
 <% end %>

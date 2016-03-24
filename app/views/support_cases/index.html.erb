@@ -31,7 +31,7 @@
                             <td><%= support_case.desc %></td>
                             <td><%= support_case.stage %></td>
                             <td><%= support_case.solution %></td>
-                            <td><%= support_case.contact.full_name %></td>
+                            <td><a href="/contacts/<%= support_case.contact.id if support_case.contact %>"><%= support_case.contact.full_name %></a></td>
                             <td><%= support_case.close_date %></td>
                             <td><%= support_case.user.full_name %></td>
                             <td><%= link_to 'Show', support_case %></td>
